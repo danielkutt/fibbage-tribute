@@ -1,6 +1,6 @@
 
 ;
-jQuery(function($){    
+jQuery(function($){
     'use strict';
 
     var Config = {}
@@ -444,7 +444,7 @@ jQuery(function($){
             displayAnswers : function() {
                 Object.keys(App.Host.answers).forEach(function(playerAnsweringId){
                     var answer = App.Host.answers[playerAnsweringId];
-                    
+
                     var $curPlayerVote = $(App.$playerVoteTemplate);
                     // console.log(playerAnsweringId);
                     $curPlayerVote.find(".playerName").html(App.Host.players[playerAnsweringId].playerName);
@@ -474,12 +474,12 @@ jQuery(function($){
                     var answer = App.Host.answers[playerAnsweringId];
                     if(answer.playerId == 'answer'){
                         var $pScore = App.Host.players[playerAnsweringId].$playerScore;
-                        
+
                         App.Host.players[playerAnsweringId].playerScore += Config.goodAnswer;
                         $pScore.text( App.Host.players[playerAnsweringId].playerScore );
                     } else {
                         var $pScore = App.Host.players[answer.playerId].$playerScore;
-                        
+
                         App.Host.players[answer.playerId].playerScore += Config.ployAnswer;
                         $pScore.text( App.Host.players[answer.playerId].playerScore );
                     }
@@ -515,7 +515,7 @@ jQuery(function($){
                     // If two players have joined, start the game!
                     if (App.Host.nbPloys === Object.keys(App.Host.players).length) {
                         console.log('Ploys all sent.');
-                        
+
                         var newData = {
                             round: data.round,
                             gameId: data.gameId,
@@ -551,7 +551,7 @@ jQuery(function($){
                     var $answer = $('<div>')
                         .addClass('answer')
                         .html(this.value);
-                    
+
                     $('#playersAnswersArea').append($answer);
                     */
                     var $curPlayerAnswer = $(App.$playerAnswerTemplate);
@@ -567,7 +567,7 @@ jQuery(function($){
                     else
                         App.Host.players[this.playerId].$playerAnswer = $curPlayerAnswer;
                 });
-                
+
                 var nbColumns;
                 if(App.Host.nbPloys <= 4)
                     nbColumns = 2;
@@ -576,7 +576,7 @@ jQuery(function($){
                 else
                     nbColumns = 4;
                 $('#playersAnswersArea').css('grid-template-columns', "1fr ".repeat(nbColumns));
-                
+
                 App.doTextFit('#hostWord');
             },
 
@@ -733,7 +733,7 @@ jQuery(function($){
 
                 IO.socket.emit('playerRestart',data);
                 App.currentRound = 0;
-                
+
                 // $('#gameArea').html("<h3>Waiting on host to start new game.</h3>");
                 $('#gameArea').html(App.$restartScreenTemplate);
             },
@@ -786,7 +786,7 @@ jQuery(function($){
                 // Insert a list item for each word in the word list
                 // received from the server.
                 $.each(data.list, function(){
-                    
+
                     var $button = $('<button/>')
                         .addClass('btnAnswer')
                         .addClass('btn')
@@ -888,4 +888,5 @@ jQuery(function($){
         App.init();
     });
 
+    return 0;
 }($));

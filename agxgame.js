@@ -6,7 +6,8 @@ var Config = require('./public/config.json');
 
 const NODE_ENV = process.env.NODE_ENV || 'dev';
 
-var questions = [];
+var questions = require('./questions');
+console.log("Questions :", questions);
 
 /**
  * This function is called by index.js to initialize a new game instance.
@@ -63,19 +64,8 @@ function hostPrepareGame(data) {
 
     data.mySocketId = sock.id;
 
-    const domain = NODE_ENV == 'prod' ? 'https://fibbage-tribute-questions.herokuapp.com' : 'http://localhost:3000'
-    const url = domain + '/question/random/' + Config.nbRounds + '?lan=' + data.language;
-    console.log(url);
-    request.get(url, (error, response, body) => {
-        if(error) {
-            return console.dir(error);
-        }
-        questions = JSON.parse(body);
-        console.log("Questions :", questions);
-
-        //console.log("All Players Present. Preparing game...");
-        io.sockets.in(data.gameId).emit('beginNewGame', data);
-    });
+    //console.log("All Players Present. Preparing game...");
+    io.sockets.in(data.gameId).emit('beginNewGame', data);
 }
 
 /*
