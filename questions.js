@@ -1,42 +1,38 @@
 module.exports = [
     {
-        question: 'Located within the municipal boundaries of Kirkland Lake, Ontario, there lies the controversially named village of ...',
-        solution: 'Swastika'
+        question: 'Pipedrive is a ___',
+        solution: 'customer relationship management tool'
     },
     {
-        question: 'Suffering from an extremely rare side effect after getting hip surgery in 2010, a Dutch man has alienated his family because he cannot stop ...',
-        solution: 'laughing'
+        question: 'Rakett is ___',
+        solution: 'a ci/cd queue engine'
     },
     {
-        question: 'According to Forbes, the average income for an “ice cream taster” is $... a year.',
-        solution: '56000'
+        question: 'JURA is ___',
+        solution: 'an assets router'
     },
     {
-        question: 'For one day in 1998, Topeka, Kansas renamed itself ...',
-        solution: 'ToPikachu'
+        question: 'Service that does load-balancing and routing is called ___',
+        solution: 'barista'
     },
     {
-        question: 'A group known as the “Robin Hooders” in Keene, New Hampshire pay for other people’s ...',
-        solution: 'parking meters'
+        question: 'If I am debugging something happening in live, I would open ___ first',
+        solution: 'graylog'
     },
     {
-        question: 'On November 12, 1970, George Thornton, a highway engineer in Oregon, had the unusual job of blowing up a ...',
-        solution: 'dead whale'
+        question: 'The latest language added to Pipedrive is ___',
+        solution: 'czech'
     },
     {
-        question: 'For a story he was reporting on in 1955, Dan Rather tried ... for the first time.',
-        solution: 'heroin'
+        question: 'The creator of Dora is ___ tribe',
+        solution: 'devops tooling'
     },
     {
-        question: 'On November 25, 2013, a 16-month-old Chinese girl underwent surgery to remove the unusual growth of a ... in her ear canal.',
-        solution: 'dandelion'
+        question: '___ tribe does not exist any more',
+        solution: 'core'
     },
     {
-        question: 'Tara Reid once said, “I make Jessica Simpson look like a ... scientist.”',
-        solution: 'rock'
+        question: '___ is the best food',
+        solution: 'kringel'
     },
-    {
-        question: 'The rare condition known as “argyria” causes people’s skin to ...',
-        solution: 'turn blue'
-    }
 ]
